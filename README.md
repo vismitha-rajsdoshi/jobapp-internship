@@ -38,7 +38,7 @@ A full-stack web application for job seekers to browse and apply for jobs, and f
 ## Deployed Applications
 
 ### Frontend
-- **Live Application**: [CareerArch Job Application Platform](https://jobapp-internship.vercel.app) (Vercel)
+- **Live Application**: [CareerArch Job Application Platform](https://jobapp-internship-app.vercel.app/login) (Vercel)
 
 ### Backend API
 - **API Base URL**: https://jobapp-internship.onrender.com
