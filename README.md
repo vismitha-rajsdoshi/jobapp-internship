@@ -35,6 +35,16 @@ A full-stack web application for job seekers to browse and apply for jobs, and f
 - **React Router** for navigation
 - **Axios** for API calls
 
+## Deployed Applications
+
+### Frontend
+- **Live Application**: [CareerArch Job Application Platform](https://jobapp-internship.vercel.app) (Vercel)
+- **Alternative Deployment**: [CareerArch on Netlify](https://jobapp-internship.netlify.app) (Netlify)
+
+### Backend API
+- **API Base URL**: https://jobapp-internship.onrender.com
+- **API Documentation**: See API Endpoints section below
+
 ## Prerequisites
 
 Before running this application, make sure you have the following installed:
