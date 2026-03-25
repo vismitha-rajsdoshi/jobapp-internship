@@ -1,197 +1,260 @@
-# CareerArch - Job Application Platform
+CareerArch — Job Application Platform
 
-A full-stack web application for job seekers to browse and apply for jobs, and for administrators to manage job postings.
+A full-stack web application that enables job seekers to explore and apply for jobs, while allowing administrators to manage job postings efficiently.
 
-## Features
+---
 
-### For Job Seekers:
+## 🌐 Live Demo
 
-- Browse available job listings with filtering by company, location, and job type
-- Apply to jobs with one-click application
-- View applied jobs history
-- User authentication and account management
+* 🔗 **Frontend**: [https://jobapp-internship-app.vercel.app/login](https://jobapp-internship-app.vercel.app/login)
+* 🔗 **Backend API**: [https://jobapp-internship.onrender.com](https://jobapp-internship.onrender.com)
 
-### For Administrators:
+---
 
-- Dashboard to manage job postings
-- Create, view, edit, and delete job listings
-- Secure admin access (granted to emails ending with @arnifi.com)
+## ✨ Features
 
-## Tech Stack
+### 👨‍💻 For Job Seekers
 
-### Backend:
+* Browse job listings with filters (company, location, job type)
+* One-click job application
+* Track applied jobs
+* Secure authentication system
 
-- **Node.js** with Express.js
-- **PostgreSQL** database
-- **JWT** for authentication
-- **bcrypt** for password hashing
-- Security middleware (Helmet, CORS, Rate Limiting)
+### 🛠️ For Administrators
 
-### Frontend:
+* Admin dashboard to manage jobs
+* Create, edit, and delete job postings
+* Role-based access (emails ending with `@arnifi.com`)
 
-- **React** with Vite
-- **Redux Toolkit** for state management
-- **Tailwind CSS** for styling
-- **React Router** for navigation
-- **Axios** for API calls
+---
 
-## Deployed Applications
+## 🧱 Tech Stack
+
+### Backend
+
+* Node.js + Express.js
+* PostgreSQL
+* JWT Authentication
+* bcrypt (password hashing)
+* Helmet, CORS, Rate Limiting
 
 ### Frontend
-- **Live Application**: [CareerArch Job Application Platform](https://jobapp-internship-app.vercel.app/login) (Vercel)
 
-### Backend API
-- **API Base URL**: https://jobapp-internship.onrender.com
-- **API Documentation**: See API Endpoints section below
+* React (Vite)
+* Redux Toolkit
+* Tailwind CSS
+* React Router
+* Axios
 
-## Prerequisites
+---
 
-Before running this application, make sure you have the following installed:
+## 📸 Screenshots
 
-- Node.js (v14 or higher)
-- PostgreSQL database
-- npm or yarn package manager
+> *(Add your screenshots in a `/screenshots` folder and update paths below)*
 
-## Installation
+```
+/screenshots/login.png
+/screenshots/dashboard.png
+```
 
-1. Clone the repository:
+---
 
-   ```bash
-   git clone <repository-url>
-   cd jobapp-internship
-   ```
+## ⚙️ Installation & Setup
 
-2. Install backend dependencies:
+### 1️⃣ Clone the Repository
 
-   ```bash
-   cd backend
-   npm install
-   ```
+```bash
+git clone <repository-url>
+cd jobapp-internship
+```
 
-3. Install frontend dependencies:
-   ```bash
-   cd ../frontend
-   npm install
-   ```
+---
 
-## Setup
+### 2️⃣ Install Dependencies
 
-### Database Setup
-
-1. Create a PostgreSQL database
-2. Update the database connection in `backend/.env` file:
-
-   ```
-   DATABASE_URL=postgresql://username:password@localhost:5432/database_name
-   JWT_SECRET=your_jwt_secret_key
-   FRONTEND_URL=http://localhost:5173
-   PORT=5000
-   ```
-
-3. Run the database initialization script:
-   ```bash
-   cd backend
-   node initDB.js
-   ```
-
-### Environment Variables
-
-Create a `.env` file in the `backend` directory with the following variables:
-
-- `DATABASE_URL`: PostgreSQL connection string
-- `JWT_SECRET`: Secret key for JWT token generation
-- `FRONTEND_URL`: Frontend application URL (default: http://localhost:5173)
-- `PORT`: Backend server port (default: 5000)
-
-## Running the Application
-
-### Start the Backend Server
+#### Backend
 
 ```bash
 cd backend
-npm run dev  # For development with nodemon
-# or
-npm start    # For production
+npm install
 ```
 
-The backend server will start on `http://localhost:5000`
+#### Frontend
 
-### Start the Frontend Application
+```bash
+cd ../frontend
+npm install
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the `backend/` directory:
+
+```
+DATABASE_URL=postgresql://username:password@localhost:5432/database_name
+JWT_SECRET=your_jwt_secret_key
+FRONTEND_URL=http://localhost:5173
+PORT=5000
+```
+
+> 💡 You can create a `.env.example` file for reference:
+
+```
+DATABASE_URL=
+JWT_SECRET=
+FRONTEND_URL=
+PORT=
+```
+
+---
+
+## 🗄️ Database Setup
+
+1. Create a PostgreSQL database
+2. Run the initialization script:
+
+```bash
+cd backend
+node initDB.js
+```
+
+---
+
+## ▶️ Running the Application
+
+### Start Backend
+
+```bash
+cd backend
+npm run dev
+# or
+npm start
+```
+
+Backend runs on:
+👉 `http://localhost:5000`
+
+---
+
+### Start Frontend
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-The frontend application will start on `http://localhost:5173`
+Frontend runs on:
+👉 `http://localhost:5173`
 
-## API Endpoints
+---
+
+## 🔑 Demo Credentials *(Optional)*
+
+> *(Only include if safe for public use)*
+
+**Admin**
+
+```
+Email: admin@arnifi.com
+Password: password123
+```
+
+**User**
+
+```
+Email: user@example.com
+Password: password123
+```
+
+---
+
+## 🔌 API Endpoints
 
 ### Authentication
 
-- `POST /api/auth/signup` - User registration
-- `POST /api/auth/login` - User login
+* `POST /api/auth/signup` — Register user
+* `POST /api/auth/login` — Login user
 
 ### Jobs
 
-- `GET /api/jobs` - Get all jobs
-- `POST /api/jobs` - Create a new job (Admin only)
-- `PUT /api/jobs/:id` - Update job (Admin only)
-- `DELETE /api/jobs/:id` - Delete job (Admin only)
-- `POST /api/jobs/:id/apply` - Apply to a job (Authenticated users)
+* `GET /api/jobs` — Get all jobs
+* `POST /api/jobs` — Create job *(Admin only)*
+* `PUT /api/jobs/:id` — Update job *(Admin only)*
+* `DELETE /api/jobs/:id` — Delete job *(Admin only)*
+* `POST /api/jobs/:id/apply` — Apply to job
 
 ### Applications
 
-- `GET /api/applications` - Get user's applied jobs
+* `GET /api/applications` — Get applied jobs
 
-## Project Structure
+---
+
+## 🗂️ Project Structure
 
 ```
 jobapp-internship/
 ├── backend/
 │   ├── middleware/
-│   │   └── auth.js
 │   ├── routes/
-│   │   ├── auth.js
-│   │   ├── jobs.js
-│   │   └── applications.js
 │   ├── db.js
 │   ├── init.sql
 │   ├── initDB.js
-│   ├── package.json
 │   └── server.js
+│
 ├── frontend/
-│   ├── public/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── InteractiveBg.jsx
-│   │   │   └── Navbar.jsx
 │   │   ├── pages/
-│   │   │   ├── AdminDashboard.jsx
-│   │   │   ├── AppliedJobs.jsx
-│   │   │   ├── JobsList.jsx
-│   │   │   ├── Login.jsx
-│   │   │   └── Signup.jsx
 │   │   ├── store/
-│   │   │   ├── authSlice.js
-│   │   │   ├── index.js
-│   │   │   └── jobsSlice.js
 │   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   ├── package.json
-│   └── vite.config.js
+│   │   └── main.jsx
+│
 └── README.md
 ```
 
-## Contributing
+---
+
+## 🔐 Admin Access
+
+Users with email addresses ending in:
+
+```
+@arnifi.com
+```
+
+are automatically granted **admin privileges**.
+
+---
+
+## ⚠️ Notes
+
+* Ensure PostgreSQL is running before starting backend
+* Run `initDB.js` only once (initial setup)
+* Add `.env` to `.gitignore`
+
+---
+
+## 🚀 Future Improvements
+
+* Resume upload support
+* Email notifications
+* Advanced search & pagination
+* Role-based access control (RBAC)
+* Job bookmarking feature
+
+---
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create your branch
 
-## License
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Commit changes
+4. Push and open a Pull Request
 
-This project is licensed under the ISC License.
+
