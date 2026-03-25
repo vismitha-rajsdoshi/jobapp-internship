@@ -39,7 +39,6 @@ A full-stack web application for job seekers to browse and apply for jobs, and f
 
 ### Frontend
 - **Live Application**: [CareerArch Job Application Platform](https://jobapp-internship.vercel.app) (Vercel)
-- **Alternative Deployment**: [CareerArch on Netlify](https://jobapp-internship.netlify.app) (Netlify)
 
 ### Backend API
 - **API Base URL**: https://jobapp-internship.onrender.com
