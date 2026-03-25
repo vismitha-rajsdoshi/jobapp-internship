@@ -1,9 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL !== undefined 
-  ? `${import.meta.env.VITE_API_URL}/api/auth` 
-  : 'http://localhost:5001/api/auth';
+const API_URL = 'https://jobapp-internship.onrender.com/api/auth';
 
 export const loginUser = createAsyncThunk('auth/login', async (credentials, thunkAPI) => {
   try {
